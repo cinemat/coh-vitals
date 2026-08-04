@@ -37,11 +37,6 @@ jobs:
           fi
           python3 scripts/measure-dashboard.py "$COMMENT"
 
-      - name: Підготувати сторінку для GitHub Pages
-        run: |
-          mkdir -p docs
-          cp dist/dashboard.html docs/index.html
-
       - name: Підтягнути можливі паралельні зміни
         run: git pull --rebase --autostash origin main
 

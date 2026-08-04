@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 FONTS = ROOT / "assets" / "fonts"
 DATA_FILE = ROOT / "data" / "history.json"
 OUT_FILE = ROOT / "dist" / "dashboard.html"
+PAGES_FILE = ROOT / "docs" / "index.html"
 TEMPLATE = Path(__file__).resolve().parent / "dashboard_template.html"
 
 LATIN_RANGE = "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
@@ -57,6 +58,15 @@ def build():
     OUT_FILE.parent.mkdir(exist_ok=True)
     OUT_FILE.write_text(html, encoding="utf-8")
     print(f"Built {OUT_FILE} ({OUT_FILE.stat().st_size / 1024:.0f} KB)")
+
+    # dist/dashboard.html is a bare fragment (no doctype/html/head/body) —
+    # that's what the Artifact tool expects, it injects its own skeleton.
+    # GitHub Pages serves files as-is, so docs/index.html needs a real
+    # standalone document or the browser renders it in Quirks Mode.
+    pages_html = f"<!DOCTYPE html>\n<html lang=\"uk\">\n{html}\n</html>\n"
+    PAGES_FILE.parent.mkdir(exist_ok=True)
+    PAGES_FILE.write_text(pages_html, encoding="utf-8")
+    print(f"Built {PAGES_FILE} ({PAGES_FILE.stat().st_size / 1024:.0f} KB)")
 
 
 if __name__ == "__main__":
