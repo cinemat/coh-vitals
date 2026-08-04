@@ -52,9 +52,10 @@ def fetch_psi(api_key, url, strategy, retries=4):
             with urllib.request.urlopen(req_url, timeout=90) as resp:
                 return json.load(resp)
         except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < retries:
+            retriable = e.code == 429 or e.code >= 500
+            if retriable and attempt < retries:
                 wait = 10 * attempt
-                print(f"  429, чекаю {wait}с, повтор {attempt}/{retries}...", flush=True)
+                print(f"  HTTP {e.code}, чекаю {wait}с, повтор {attempt}/{retries}...", flush=True)
                 time.sleep(wait)
                 continue
             sys.exit(f"HTTP {e.code} для {url} [{strategy}]: {e.read()[:300]}")

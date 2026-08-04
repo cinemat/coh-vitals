@@ -58,9 +58,10 @@ def fetch_psi(api_key, url, strategy, retries=4):
                 return json.load(resp)
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", "ignore")
-            if e.code == 429 and attempt < retries:
+            retriable = e.code == 429 or e.code >= 500
+            if retriable and attempt < retries:
                 wait = 10 * attempt
-                print(f"  429 rate limit, чекаю {wait}с і повторюю ({attempt}/{retries})...", flush=True)
+                print(f"  HTTP {e.code}, чекаю {wait}с і повторюю ({attempt}/{retries})...", flush=True)
                 time.sleep(wait)
                 continue
             sys.exit(f"HTTP {e.code} для {url} [{strategy}]: {body[:300]}")
