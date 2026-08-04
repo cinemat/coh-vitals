@@ -63,7 +63,7 @@ def build():
     # that's what the Artifact tool expects, it injects its own skeleton.
     # GitHub Pages serves files as-is, so docs/index.html needs a real
     # standalone document or the browser renders it in Quirks Mode.
-    pages_html = f"<!DOCTYPE html>\n<html lang=\"uk\">\n{html}\n</html>\n"
+    pages_html = f"<!DOCTYPE html>\n<html lang=\"uk\">\n<meta charset=\"UTF-8\">\n{html}\n</html>\n"
     PAGES_FILE.parent.mkdir(exist_ok=True)
     PAGES_FILE.write_text(pages_html, encoding="utf-8")
     print(f"Built {PAGES_FILE} ({PAGES_FILE.stat().st_size / 1024:.0f} KB)")
