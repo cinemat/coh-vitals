@@ -70,9 +70,37 @@ body {
 .wrap { max-width: 1220px; margin: 0 auto; padding: 28px 20px 80px; }
 
 header.top { display: flex; flex-direction: column; gap: 6px; margin-bottom: 22px; }
+.top-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
 .eyebrow { font-weight: 600; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
 h1 { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(24px, 3.4vw, 34px); letter-spacing: -0.01em; margin: 0; text-wrap: balance; color: var(--text); }
 .subtitle { color: var(--text-muted); font-size: 14px; max-width: 62ch; }
+
+.refresh-group { display: flex; gap: 8px; align-items: stretch; flex: none; }
+.comment-input {
+  font: inherit; font-size: 13px; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 12px; padding: 0 14px; width: 240px;
+  outline: none; transition: border-color .15s;
+}
+.comment-input:focus { border-color: var(--accent); }
+.comment-input::placeholder { color: var(--text-faint); }
+.refresh-btn {
+  display: flex; align-items: center; gap: 8px; font: inherit; font-weight: 600; font-size: 13.5px;
+  background: var(--accent); color: #fff; border: none; border-radius: 12px; padding: 11px 18px;
+  cursor: pointer; white-space: nowrap; transition: opacity .15s, transform .15s; flex: none;
+}
+.refresh-btn:hover { opacity: .9; }
+.refresh-btn:active { transform: scale(.97); }
+.refresh-btn:disabled { opacity: .55; cursor: not-allowed; }
+.refresh-btn .spin { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; display: none; animation: spin .7s linear infinite; }
+.refresh-btn.loading .spin { display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .refresh-btn .spin { animation: none; } }
+
+.status-banner { font-size: 13px; padding: 10px 14px; border-radius: 10px; margin-bottom: 18px; display: none; }
+.status-banner.show { display: block; }
+.status-banner.info { background: var(--accent-soft); color: var(--accent); }
+.status-banner.error { background: var(--critical-soft); color: var(--critical); }
+.status-banner.success { background: var(--good-soft); color: var(--good); }
 .updated-row { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 4px; font-size: 12.5px; color: var(--text-faint); }
 .updated-row strong { color: var(--text-muted); font-weight: 500; }
 
@@ -171,12 +199,24 @@ footer.foot code { font-family: 'Plex Mono', monospace; background: var(--surfac
 
 <div class="wrap">
   <header class="top">
-    <div class="eyebrow">Performance Vitals · локальна версія</div>
-    <h1>Vitals — моніторинг продуктивності</h1>
-    <div class="subtitle">Лабораторні заміри (PageSpeed Insights / Lighthouse) та реальні дані користувачів (CrUX) для чотирьох ключових сторінок сайту. Дані оновлюються автоматично двічі на день через GitHub Actions; та сама версія опублікована на <a href="https://cinemat.github.io/coh-vitals/" target="_blank" rel="noopener">GitHub Pages</a>. Ручне оновлення: <code>python3 scripts/measure-dashboard.py "коментар"</code> у терміналі.</div>
+    <div class="top-row">
+      <div>
+        <div class="eyebrow">Performance Vitals · локальна версія</div>
+        <h1>Vitals — моніторинг продуктивності</h1>
+      </div>
+      <div class="refresh-group">
+        <input type="text" class="comment-input" id="commentInput" placeholder="Коментар: що щойно змінили (необов'язково)">
+        <button class="refresh-btn" id="refreshBtn">
+          <span class="spin"></span>
+          <span id="refreshLabel">↻ Оновити дані</span>
+        </button>
+      </div>
+    </div>
+    <div class="subtitle">Лабораторні заміри (PageSpeed Insights / Lighthouse) та реальні дані користувачів (CrUX) для чотирьох ключових сторінок сайту. Дані оновлюються автоматично двічі на день через GitHub Actions, або кнопкою нижче — вона знімає заміри локально й одразу пушить на GitHub. Та сама версія (без кнопки) опублікована на <a href="https://cinemat.github.io/coh-vitals/" target="_blank" rel="noopener">GitHub Pages</a>.</div>
     <div class="updated-row" id="updatedRow"></div>
   </header>
 
+  <div class="status-banner" id="statusBanner"></div>
   <div class="legend" id="legend"></div>
   <div class="overview" id="overview"></div>
   <nav class="tabs" id="tabs"></nav>
@@ -406,16 +446,56 @@ function render() {
   document.querySelectorAll('.tab-btn, .ov-card').forEach(el => el.addEventListener('click', () => activate(el.dataset.key)));
 }
 
+function showBanner(kind, text) {
+  const el = document.getElementById('statusBanner');
+  el.className = 'status-banner show ' + kind;
+  el.textContent = text;
+}
+function hideBanner() {
+  document.getElementById('statusBanner').classList.remove('show');
+}
+
 async function loadData() {
   try {
     const res = await fetch('data/history.json?_=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     DATA = await res.json();
+    hideBanner();
     render();
   } catch (e) {
     document.getElementById('panels').innerHTML = `<div class="empty-state"><h2>Не вдалось завантажити дані</h2><p>Переконайтесь, що відкрито через локальний сервер (<code>python3 scripts/server.py</code>), а не подвійним кліком по файлу.</p><p style="color:var(--critical)">${e.message}</p></div>`;
   }
 }
+
+const btn = document.getElementById('refreshBtn');
+const label = document.getElementById('refreshLabel');
+const commentInput = document.getElementById('commentInput');
+btn.addEventListener('click', async () => {
+  const comment = commentInput.value.trim() || 'Оновлено через кнопку Refresh';
+  btn.disabled = true;
+  btn.classList.add('loading');
+  label.textContent = 'Знімаю PageSpeed... (~1-3 хв)';
+  showBanner('info', 'Виконую заміри для 4 сторінок × mobile/desktop, потім комічу і пушу на GitHub. Зачекайте, будь ласка.');
+  try {
+    const res = await fetch('/refresh', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ comment }),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.log || ('HTTP ' + res.status));
+    showBanner('success', 'Готово — дані оновлено і запушено на GitHub. Pages задеплоїться за 1-2 хв.');
+    commentInput.value = '';
+    await loadData();
+    setTimeout(hideBanner, 6000);
+  } catch (e) {
+    showBanner('error', 'Не вдалось оновити: ' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    label.textContent = '↻ Оновити дані';
+  }
+});
 
 loadData();
 </script>
