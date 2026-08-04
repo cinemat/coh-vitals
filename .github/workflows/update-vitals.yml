@@ -42,6 +42,9 @@ jobs:
           mkdir -p docs
           cp dist/dashboard.html docs/index.html
 
+      - name: Підтягнути можливі паралельні зміни
+        run: git pull --rebase --autostash origin main
+
       - name: Закомітити оновлені дані
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
