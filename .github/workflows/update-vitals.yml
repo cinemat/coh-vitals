@@ -1,0 +1,49 @@
+name: Update Vitals
+
+on:
+  schedule:
+    - cron: '0 6,18 * * *'  # 09:00 і 21:00 Київ (UTC+3 влітку)
+  workflow_dispatch:
+    inputs:
+      comment:
+        description: 'Коментар до заміру (необов’язково)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-vitals
+  cancel-in-progress: false
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Виміряти PageSpeed і перебудувати дашборд
+        env:
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: |
+          COMMENT="${{ github.event.inputs.comment }}"
+          if [ -z "$COMMENT" ]; then
+            COMMENT="Автоматичне оновлення (GitHub Actions, $(date -u +%Y-%m-%d))"
+          fi
+          python3 scripts/measure-dashboard.py "$COMMENT"
+
+      - name: Підготувати сторінку для GitHub Pages
+        run: |
+          mkdir -p docs
+          cp dist/dashboard.html docs/index.html
+
+      - name: Закомітити оновлені дані
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: оновлення Vitals [skip ci]"
+          file_pattern: "data/history.json dist/dashboard.html docs/index.html"
