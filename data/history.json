@@ -697,6 +697,344 @@
           "category": "SLOW"
         }
       }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "root",
+      "strategy": "mobile",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 34,
+        "lcp_ms": 31426.046856981775,
+        "cls": 0.01585530450789306,
+        "fcp_ms": 3453.207958544961,
+        "ttfb_ms": 340,
+        "tbt_ms": 1484.7198896184073,
+        "si_ms": 9070.049719221126,
+        "tti_ms": 38902.05423363487,
+        "weight_bytes": 15000802,
+        "requests": 208,
+        "fetch_time": "2026-08-04T16:42:55.211Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 2263,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 290,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.0,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 1698,
+          "category": "FAST"
+        },
+        "ttfb_ms": {
+          "value": 631,
+          "category": "FAST"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "root",
+      "strategy": "desktop",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 44,
+        "lcp_ms": 6067.03993644647,
+        "cls": 0.006242762295024479,
+        "fcp_ms": 884.3318339743869,
+        "ttfb_ms": 269,
+        "tbt_ms": 603.9970992820736,
+        "si_ms": 2961.428191869458,
+        "tti_ms": 7279.0195111128405,
+        "weight_bytes": 19518808,
+        "requests": 215,
+        "fetch_time": "2026-08-04T16:43:38.499Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 1518,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 93,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.01,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 1140,
+          "category": "FAST"
+        },
+        "ttfb_ms": {
+          "value": 854,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "en",
+      "strategy": "mobile",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 46,
+        "lcp_ms": 32176.072714808095,
+        "cls": 0.03855781123461148,
+        "fcp_ms": 3303.4595099678922,
+        "ttfb_ms": 262,
+        "tbt_ms": 533.5917636786671,
+        "si_ms": 11471.963848376148,
+        "tti_ms": 40733.73656771663,
+        "weight_bytes": 15424105,
+        "requests": 247,
+        "fetch_time": "2026-08-04T16:44:09.637Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 2600,
+          "category": "AVERAGE"
+        },
+        "inp_ms": null,
+        "cls": {
+          "value": 0.86,
+          "category": "SLOW"
+        },
+        "fcp_ms": {
+          "value": 2137,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 1548,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "en",
+      "strategy": "desktop",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 44,
+        "lcp_ms": 6817.233178631392,
+        "cls": 0.001041935687013275,
+        "fcp_ms": 2793.248469729275,
+        "ttfb_ms": 270,
+        "tbt_ms": 301.0000000000007,
+        "si_ms": 6014.0159136017555,
+        "tti_ms": 9038.185969315673,
+        "weight_bytes": 17975049,
+        "requests": 257,
+        "fetch_time": "2026-08-04T16:44:47.026Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 1946,
+          "category": "FAST"
+        },
+        "inp_ms": null,
+        "cls": {
+          "value": 0.94,
+          "category": "SLOW"
+        },
+        "fcp_ms": {
+          "value": 1454,
+          "category": "FAST"
+        },
+        "ttfb_ms": {
+          "value": 1448,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "donate-ua",
+      "strategy": "mobile",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 49,
+        "lcp_ms": 17542.85014268856,
+        "cls": 0.007300940053303605,
+        "fcp_ms": 4053.2378562966132,
+        "ttfb_ms": 394,
+        "tbt_ms": 500,
+        "si_ms": 6320.598335044124,
+        "tti_ms": 22073.652808871422,
+        "weight_bytes": 5027619,
+        "requests": 192,
+        "fetch_time": "2026-08-04T16:45:24.780Z"
+      },
+      "field": {
+        "scope": "origin_fallback",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3038,
+          "category": "AVERAGE"
+        },
+        "inp_ms": {
+          "value": 320,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.03,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 2704,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 1913,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "donate-ua",
+      "strategy": "desktop",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 55,
+        "lcp_ms": 4647,
+        "cls": 0.007554414569419711,
+        "fcp_ms": 1003.2030249142997,
+        "ttfb_ms": 421,
+        "tbt_ms": 355,
+        "si_ms": 2590.8602170063064,
+        "tti_ms": 6095.1285677461465,
+        "weight_bytes": 8504764,
+        "requests": 191,
+        "fetch_time": "2026-08-04T16:45:54.219Z"
+      },
+      "field": {
+        "scope": "origin_fallback",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 2415,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 94,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.21,
+          "category": "AVERAGE"
+        },
+        "fcp_ms": {
+          "value": 2034,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 1514,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "donate-en",
+      "strategy": "mobile",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 33,
+        "lcp_ms": 7726.010060706112,
+        "cls": 0.05745155118568807,
+        "fcp_ms": 4351.00548765788,
+        "ttfb_ms": 474,
+        "tbt_ms": 1368,
+        "si_ms": 10401.504391754512,
+        "tti_ms": 28582.446112968042,
+        "weight_bytes": 6228251,
+        "requests": 272,
+        "fetch_time": "2026-08-04T16:47:26.472Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 5694,
+          "category": "SLOW"
+        },
+        "inp_ms": {
+          "value": 464,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.09,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 4410,
+          "category": "SLOW"
+        },
+        "ttfb_ms": {
+          "value": 2843,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T16:51:41+00:00",
+      "url_key": "donate-en",
+      "strategy": "desktop",
+      "comment": "Третій запуск — з rebase перед комітом",
+      "lab": {
+        "score": 61,
+        "lcp_ms": 1801.0081093371277,
+        "cls": 0.02185047781623063,
+        "fcp_ms": 1041.004526141653,
+        "ttfb_ms": 407,
+        "tbt_ms": 518.0000000000005,
+        "si_ms": 3139.9880658809516,
+        "tti_ms": 5771.201131535414,
+        "weight_bytes": 6255099,
+        "requests": 272,
+        "fetch_time": "2026-08-04T16:50:54.645Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3744,
+          "category": "AVERAGE"
+        },
+        "inp_ms": {
+          "value": 198,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.74,
+          "category": "SLOW"
+        },
+        "fcp_ms": {
+          "value": 3108,
+          "category": "SLOW"
+        },
+        "ttfb_ms": {
+          "value": 2060,
+          "category": "SLOW"
+        }
+      }
     }
   ]
 }
