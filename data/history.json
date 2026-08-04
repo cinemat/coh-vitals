@@ -1035,6 +1035,344 @@
           "category": "SLOW"
         }
       }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "root",
+      "strategy": "mobile",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 39,
+        "lcp_ms": 46068.04925264315,
+        "cls": 0.002357935861148173,
+        "fcp_ms": 4082.190370400037,
+        "ttfb_ms": 79,
+        "tbt_ms": 793.0000000000009,
+        "si_ms": 10469.2862721142,
+        "tti_ms": 49156.35323644101,
+        "weight_bytes": 14783543,
+        "requests": 204,
+        "fetch_time": "2026-08-04T17:19:44.492Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 2263,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 290,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.0,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 1698,
+          "category": "FAST"
+        },
+        "ttfb_ms": {
+          "value": 631,
+          "category": "FAST"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "root",
+      "strategy": "desktop",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 35,
+        "lcp_ms": 6195.061180552881,
+        "cls": 0.01018163856670615,
+        "fcp_ms": 814.6422702730454,
+        "ttfb_ms": 68,
+        "tbt_ms": 5704.85978967823,
+        "si_ms": 6622.369408789846,
+        "tti_ms": 15143.55448072869,
+        "weight_bytes": 19670986,
+        "requests": 217,
+        "fetch_time": "2026-08-04T17:20:20.611Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 1518,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 93,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.01,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 1140,
+          "category": "FAST"
+        },
+        "ttfb_ms": {
+          "value": 854,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "en",
+      "strategy": "mobile",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 33,
+        "lcp_ms": 32408.54768909921,
+        "cls": 0.042051843996124445,
+        "fcp_ms": 3332.115672846782,
+        "ttfb_ms": 105,
+        "tbt_ms": 1507.233242522976,
+        "si_ms": 12431.455605433526,
+        "tti_ms": 54721.72544823666,
+        "weight_bytes": 15394905,
+        "requests": 247,
+        "fetch_time": "2026-08-04T17:21:47.286Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 2600,
+          "category": "AVERAGE"
+        },
+        "inp_ms": null,
+        "cls": {
+          "value": 0.86,
+          "category": "SLOW"
+        },
+        "fcp_ms": {
+          "value": 2137,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 1548,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "en",
+      "strategy": "desktop",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 67,
+        "lcp_ms": 6062.07613028981,
+        "cls": 0.017173693344934297,
+        "fcp_ms": 872.9907571136472,
+        "ttfb_ms": 98,
+        "tbt_ms": 138.00000000000045,
+        "si_ms": 2547.3591464472597,
+        "tti_ms": 7313.23483524996,
+        "weight_bytes": 17840432,
+        "requests": 258,
+        "fetch_time": "2026-08-04T17:22:26.711Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 1946,
+          "category": "FAST"
+        },
+        "inp_ms": null,
+        "cls": {
+          "value": 0.94,
+          "category": "SLOW"
+        },
+        "fcp_ms": {
+          "value": 1454,
+          "category": "FAST"
+        },
+        "ttfb_ms": {
+          "value": 1448,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "donate-ua",
+      "strategy": "mobile",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 34,
+        "lcp_ms": 17476.521511689447,
+        "cls": 0,
+        "fcp_ms": 5251.005752416953,
+        "ttfb_ms": 117,
+        "tbt_ms": 1053,
+        "si_ms": 10027.880389950515,
+        "tti_ms": 22220.12768111856,
+        "weight_bytes": 5028560,
+        "requests": 193,
+        "fetch_time": "2026-08-04T17:23:12.390Z"
+      },
+      "field": {
+        "scope": "origin_fallback",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3038,
+          "category": "AVERAGE"
+        },
+        "inp_ms": {
+          "value": 320,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.03,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 2704,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 1913,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "donate-ua",
+      "strategy": "desktop",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 50,
+        "lcp_ms": 5967.750034445029,
+        "cls": 0.007554414569419711,
+        "fcp_ms": 963.2452161583916,
+        "ttfb_ms": 106,
+        "tbt_ms": 414.0000000000009,
+        "si_ms": 2834.7310184851476,
+        "tti_ms": 6680.443164440612,
+        "weight_bytes": 8505892,
+        "requests": 192,
+        "fetch_time": "2026-08-04T17:23:47.973Z"
+      },
+      "field": {
+        "scope": "origin_fallback",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 2415,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 94,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.21,
+          "category": "AVERAGE"
+        },
+        "fcp_ms": {
+          "value": 2034,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 1514,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "donate-en",
+      "strategy": "mobile",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 31,
+        "lcp_ms": 15342.010836500624,
+        "cls": 0.0190461136369034,
+        "fcp_ms": 5626.003905540834,
+        "ttfb_ms": 171,
+        "tbt_ms": 1403.4999999999964,
+        "si_ms": 12859.508399848399,
+        "tti_ms": 28598.27000725641,
+        "weight_bytes": 6226851,
+        "requests": 272,
+        "fetch_time": "2026-08-04T17:24:18.938Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 5694,
+          "category": "SLOW"
+        },
+        "inp_ms": {
+          "value": 464,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.09,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 4410,
+          "category": "SLOW"
+        },
+        "ttfb_ms": {
+          "value": 2843,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T17:27:57+00:00",
+      "url_key": "donate-en",
+      "strategy": "desktop",
+      "comment": "Оновлено через кнопку Refresh",
+      "lab": {
+        "score": 51,
+        "lcp_ms": 1761.5,
+        "cls": 0.014082600135663429,
+        "fcp_ms": 1041,
+        "ttfb_ms": 190,
+        "tbt_ms": 16622,
+        "si_ms": 8083.975263988454,
+        "tti_ms": 27718.4,
+        "weight_bytes": 6265431,
+        "requests": 283,
+        "fetch_time": "2026-08-04T17:26:05.009Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3744,
+          "category": "AVERAGE"
+        },
+        "inp_ms": {
+          "value": 198,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.74,
+          "category": "SLOW"
+        },
+        "fcp_ms": {
+          "value": 3108,
+          "category": "SLOW"
+        },
+        "ttfb_ms": {
+          "value": 2060,
+          "category": "SLOW"
+        }
+      }
     }
   ]
 }
