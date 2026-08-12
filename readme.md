@@ -37,6 +37,24 @@
 
 ---
 
+## 1.1 Сервіс моніторингу Vitals (GitHub)
+
+Репозиторій `cinemat/coh-vitals` (https://github.com/cinemat/coh-vitals) — окремий сервіс, який автоматично знімає показники PageSpeed Insights і веде історію продуктивності сайту.
+
+- **Дашборд:** https://cinemat.github.io/coh-vitals/
+- **Розклад:** GitHub Actions workflow `.github/workflows/update-vitals.yml`, cron `0 6,18 * * *` — **двічі на день**, о 09:00 і 21:00 за Києвом (влітку, UTC+3)
+- **Що вимірює:** PSI/Lighthouse (лабораторні дані) + CrUX (реальні дані користувачів, 28-денне вікно, p75) для 4 сторінок × mobile/desktop:
+  - Головна (UA) — `https://childrenheroes.org/`
+  - Home (EN) — `https://childrenheroes.org/en/`
+  - Донат-лендінг (UA) — `.../support-ukrainian-children-who-lost-parents/`
+  - Donate landing (EN) — `.../en/support-ukrainian-children-who-lost-parents-2/`
+- **Як працює:** `python3 scripts/measure-dashboard.py` викликає PSI API (`PAGESPEED_API_KEY` у секретах репо), дописує новий snapshot у `data/history.json` і перебудовує `dist/dashboard.html` / `docs/index.html`; воркфлоу коммітить зміни автоматично (`chore: оновлення Vitals [skip ci]`)
+- **Ручний запуск:** можна тригернути вручну через `workflow_dispatch` з опційним коментарем до заміру; локально є кнопка Refresh, яка робить те саме і автокомітить+пушить результат
+- **Дані:** кожен запуск додає ~8 snapshots (4 сторінки × 2 стратегії) у `data/history.json`; станом на 2026-08-11 накопичено 136 snapshots за тиждень моніторингу (старт 2026-08-04)
+- **Важливо:** локальний клон може відставати від `origin/main`, бо cron комітить прямо в GitHub — перед аналізом даних робити `git pull`
+
+---
+
 ## 2. Як організувати це в ClickUp — рекомендація
 
 ### Структура
