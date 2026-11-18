@@ -65710,6 +65710,344 @@
           "category": "SLOW"
         }
       }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "root",
+      "strategy": "mobile",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 57,
+        "lcp_ms": 4951.020135882126,
+        "cls": 0.02638995262043498,
+        "fcp_ms": 2433.70318184481,
+        "ttfb_ms": 364,
+        "tbt_ms": 567.5035072676947,
+        "si_ms": 7977.733880920947,
+        "tti_ms": 15412.521566996282,
+        "weight_bytes": 8127808,
+        "requests": 159,
+        "fetch_time": "2026-11-18T14:56:38.116Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 2219,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 277,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.07,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 1878,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 988,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "root",
+      "strategy": "desktop",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 56,
+        "lcp_ms": 1403.5069186847388,
+        "cls": 0.002948873412477769,
+        "fcp_ms": 592.003074970995,
+        "ttfb_ms": 364,
+        "tbt_ms": 5099.498462514504,
+        "si_ms": 6473.332634125822,
+        "tti_ms": 9682.051537485499,
+        "weight_bytes": 20117341,
+        "requests": 170,
+        "fetch_time": "2026-11-18T14:57:09.474Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "AVERAGE",
+        "lcp_ms": {
+          "value": 2024,
+          "category": "FAST"
+        },
+        "inp_ms": {
+          "value": 84,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.01,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 1767,
+          "category": "FAST"
+        },
+        "ttfb_ms": {
+          "value": 1539,
+          "category": "AVERAGE"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "en",
+      "strategy": "mobile",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 46,
+        "lcp_ms": 4517.020929021262,
+        "cls": 0.028918031098867824,
+        "fcp_ms": 2405.516695439571,
+        "ttfb_ms": 362,
+        "tbt_ms": 1595.9999999999982,
+        "si_ms": 10459.09350466464,
+        "tti_ms": 17625.531733075517,
+        "weight_bytes": 8493178,
+        "requests": 203,
+        "fetch_time": "2026-11-18T14:57:56.145Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3933,
+          "category": "AVERAGE"
+        },
+        "inp_ms": null,
+        "cls": {
+          "value": 0.03,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 3468,
+          "category": "SLOW"
+        },
+        "ttfb_ms": {
+          "value": 2668,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "en",
+      "strategy": "desktop",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 75,
+        "lcp_ms": 1663.0202003247368,
+        "cls": 0.015869638433072698,
+        "fcp_ms": 524.7012977906088,
+        "ttfb_ms": 365,
+        "tbt_ms": 315.00000000000045,
+        "si_ms": 2350.5239336795207,
+        "tti_ms": 3568.1910533834193,
+        "weight_bytes": 20576909,
+        "requests": 212,
+        "fetch_time": "2026-11-18T14:58:38.555Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 2474,
+          "category": "FAST"
+        },
+        "inp_ms": null,
+        "cls": {
+          "value": 0.02,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 2265,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 1919,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "donate-ua",
+      "strategy": "mobile",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 40,
+        "lcp_ms": 11176.002523414536,
+        "cls": 0.00696426627910972,
+        "fcp_ms": 2737.000556891484,
+        "ttfb_ms": 540,
+        "tbt_ms": 1089.0069423355753,
+        "si_ms": 7883.233156985689,
+        "tti_ms": 21380.71041782701,
+        "weight_bytes": 5029433,
+        "requests": 168,
+        "fetch_time": "2026-11-18T14:59:05.907Z"
+      },
+      "field": {
+        "scope": "origin_fallback",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3273,
+          "category": "AVERAGE"
+        },
+        "inp_ms": {
+          "value": 316,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.03,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 2927,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 2207,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "donate-ua",
+      "strategy": "desktop",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 47,
+        "lcp_ms": 4374.012222311466,
+        "cls": 0.00829946778105482,
+        "fcp_ms": 605.6989091707995,
+        "ttfb_ms": 526,
+        "tbt_ms": 607.9999999999995,
+        "si_ms": 2843.2204370999234,
+        "tti_ms": 6229.717549394387,
+        "weight_bytes": 9183730,
+        "requests": 172,
+        "fetch_time": "2026-11-18T14:59:41.594Z"
+      },
+      "field": {
+        "scope": "origin_fallback",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3154,
+          "category": "AVERAGE"
+        },
+        "inp_ms": {
+          "value": 106,
+          "category": "FAST"
+        },
+        "cls": {
+          "value": 0.12,
+          "category": "AVERAGE"
+        },
+        "fcp_ms": {
+          "value": 2814,
+          "category": "AVERAGE"
+        },
+        "ttfb_ms": {
+          "value": 2234,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "donate-en",
+      "strategy": "mobile",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 44,
+        "lcp_ms": 12182.60291727875,
+        "cls": 0.019515203973597774,
+        "fcp_ms": 2513.000842688787,
+        "ttfb_ms": 541,
+        "tbt_ms": 844,
+        "si_ms": 7893.041678766089,
+        "tti_ms": 19041.91353349238,
+        "weight_bytes": 3273460,
+        "requests": 229,
+        "fetch_time": "2026-11-18T15:01:17.367Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 4298,
+          "category": "SLOW"
+        },
+        "inp_ms": {
+          "value": 445,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.02,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 3839,
+          "category": "SLOW"
+        },
+        "ttfb_ms": {
+          "value": 2801,
+          "category": "SLOW"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T15:02:33+00:00",
+      "url_key": "donate-en",
+      "strategy": "desktop",
+      "comment": "Автоматичне оновлення (GitHub Actions, 2026-11-18)",
+      "lab": {
+        "score": 41,
+        "lcp_ms": 4104.672550606912,
+        "cls": 0.03428211597802532,
+        "fcp_ms": 552.0018998859132,
+        "ttfb_ms": 544,
+        "tbt_ms": 1259.9999999999986,
+        "si_ms": 3568.8979412960107,
+        "tti_ms": 4965.63149004894,
+        "weight_bytes": 3773576,
+        "requests": 227,
+        "fetch_time": "2026-11-18T15:01:57.681Z"
+      },
+      "field": {
+        "scope": "page",
+        "overall_category": "SLOW",
+        "lcp_ms": {
+          "value": 3704,
+          "category": "AVERAGE"
+        },
+        "inp_ms": {
+          "value": 215,
+          "category": "AVERAGE"
+        },
+        "cls": {
+          "value": 0.02,
+          "category": "FAST"
+        },
+        "fcp_ms": {
+          "value": 3563,
+          "category": "SLOW"
+        },
+        "ttfb_ms": {
+          "value": 2596,
+          "category": "SLOW"
+        }
+      }
     }
   ]
 }
